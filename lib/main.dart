@@ -254,7 +254,10 @@ class ShoeApp extends StatelessWidget {
                             'Nike Air Zoom',
                           ),
                           SizedBox(height: 20.0),
-                          Text('R2300'),
+                          Text(
+                            'R2300',
+                            style: kPriceColor,
+                          ),
                         ],
                       ),
                       const Image(
@@ -264,7 +267,6 @@ class ShoeApp extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 SmallCard(
                   cardChild: Row(
                     children: [
@@ -278,7 +280,10 @@ class ShoeApp extends StatelessWidget {
                             'Fly 3',
                           ),
                           SizedBox(height: 20.0),
-                          Text('R2500'),
+                          Text(
+                            'R2500',
+                            style: kPriceColor,
+                          ),
                           // const Image(
                           //   image: AssetImage('assets/images/img5.png'),
                           //   width: 140.0,
@@ -288,62 +293,11 @@ class ShoeApp extends StatelessWidget {
                     ],
                   ),
                 ),
-
               ],
             )
           ],
         ),
       ),
-    );
-  }
-}
-
-class TrendCard extends StatelessWidget {
-  final Widget cardChild;
-
-  const TrendCard({super.key, required this.cardChild});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
-        padding: const EdgeInsets.all(10.0),
-        width: 250.0,
-        height: 90.0,
-        decoration: const BoxDecoration(
-          color: kDarkNavy,
-          borderRadius: BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-        ),
-        child: cardChild,
-      ),
-    );
-  }
-}
-
-
-class SmallCard extends StatelessWidget {
-  final Widget cardChild;
-
-  const SmallCard({super.key, required this.cardChild});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(8.0, 5.0, 0.0, 5.0),
-      padding: const EdgeInsets.all(10.0),
-      width: 118.0,
-      height: 90.0,
-      decoration: const BoxDecoration(
-        color: kDarkNavy,
-        borderRadius: BorderRadius.all(
-          Radius.circular(15.0),
-        ),
-      ),
-      child: cardChild,
     );
   }
 }
